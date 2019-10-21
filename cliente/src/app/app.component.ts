@@ -33,20 +33,21 @@ export class AppComponent implements OnInit {
     // this.Correo = '';
   }
   ngOnInit(){
-    console.log(this.artistaService.get());
+
+    this.artistaService.get().subscribe(data => {console.log(data)});
   }
   guardar() {
-    console.log(this.persona);
-    console.log(this.empleado);
-    let e = new Empleado();
-    e.nombre = this.persona.nombre;
-    e.apellido = this.persona.apellido;
-    e.salario = this.empleado.salario;
-    this.listaEmpleados.push(e);
-    console.log("es una prueba", this.empleado);
-    console.log("esta funcionando el boton");
-    console.log(this.listaEmpleados);
-alert("ya paso el limite, sol se permite 10 datos");
+//     console.log(this.persona);
+//     console.log(this.empleado);
+//     let e = new Empleado();
+//     e.nombre = this.persona.nombre;
+//     e.apellido = this.persona.apellido;
+//     e.salario = this.empleado.salario;
+//     this.listaEmpleados.push(e);
+//     console.log("es una prueba", this.empleado);
+//     console.log("esta funcionando el boton");
+//     console.log(this.listaEmpleados);
+// alert("ya paso el limite, sol se permite 10 datos");
     // let  usuario = new Usuario();
     // usuario.Nombre = this.Nombre;
     // usuario.Correo = this.Correo;
